@@ -32,7 +32,7 @@ protocol Finishable {
 
 class Promise : Finishable {
     // An array of callbacks (Void -> Void) to iterate through at resolve time.
-    var pending: (() -> ())[] = []
+    var pending: [(() -> ())] = []
     
     // A callback to call when we're completely done.
     var done: (() -> ()) = {}
